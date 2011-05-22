@@ -77,7 +77,7 @@ sub main {
 		AUTHOR        => 'Emmanuel Rodriguez <potyl@cpan.org>',
 		NAME          => 'Gtk2::Soup',
 		VERSION_FROM  => File::Spec->catfile('lib', 'Gtk2', 'Soup.pm'),
-#		ABSTRACT_FROM => File::Spec->catfile('lib', 'Gtk2', 'Soup.pm'),
+		ABSTRACT_FROM => File::Spec->catfile('lib', 'Gtk2', 'Soup.pm'),
 		LICENSE       => 'perl, lgpl',
 
 		PREREQ_PM     => \%requires,
@@ -95,7 +95,6 @@ sub main {
 			FILES => 'build',
 		},
 	);
-    print Dumper({@args});
 	WriteMakefile(@args);
 
 

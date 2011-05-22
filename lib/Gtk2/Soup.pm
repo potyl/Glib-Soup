@@ -2,7 +2,7 @@ package Gtk2::Soup;
 
 =head1 NAME
 
-Soup - HTTP client/server library for GNOME
+Gtk2::Soup - HTTP client/server library for GNOME
 
 =head1 SYNOPSIS
 
