@@ -5,6 +5,7 @@ use ExtUtils::MakeMaker;
 
 use Cwd;
 use File::Spec;
+use Data::Dumper;
 
 use Glib::CodeGen;
 use Glib::MakeHelper;
@@ -72,11 +73,11 @@ sub main {
 	
 
 	# Create the Makefile
-	WriteMakefile(
+	my @args = (
 		AUTHOR        => 'Emmanuel Rodriguez <potyl@cpan.org>',
 		NAME          => 'Gtk2::Soup',
 		VERSION_FROM  => File::Spec->catfile('lib', 'Gtk2', 'Soup.pm'),
-		ABSTRACT_FROM => File::Spec->catfile('lib', 'Gtk2', 'Soup.pm'),
+#		ABSTRACT_FROM => File::Spec->catfile('lib', 'Gtk2', 'Soup.pm'),
 		LICENSE       => 'perl, lgpl',
 
 		PREREQ_PM     => {
@@ -96,7 +97,10 @@ sub main {
 			FILES => 'build',
 		},
 	);
-	
+    print Dumper({@args});
+	WriteMakefile(@args);
+
+
 	return 0;
 }
 
@@ -107,7 +111,7 @@ sub MY::postamble {
 	$postamble .= Glib::MakeHelper->postamble_docs_full(
 		DEPENDS   => $DEPENDS,
 		XS_FILES  => [ @XS_FILES ],
-		COPYRIGHT => 'Copyright (C) 2009-2010 by Emmanuel Rodriguez'
+		COPYRIGHT => 'Copyright (C) 2011 by Emmanuel Rodriguez'
 	);
 
 	return $postamble;
