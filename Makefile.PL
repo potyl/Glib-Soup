@@ -30,7 +30,7 @@ sub main {
 
 	eval {
 		%pkgconfig = ExtUtils::PkgConfig->find("libsoup-2.4");
-		push @XS_FILES, Glib::MakeHelper->read_source_list_file('xs');
+		push @XS_FILES, Glib::MakeHelper->read_source_list_file('xs/xs-soup');
 		push @typemaps, 'maps';
 		push @deps, 'Glib';
 		$requires{Glib} = '1.000';
@@ -48,7 +48,7 @@ sub main {
 	$DEPENDS = ExtUtils::Depends->new('Gtk2::Soup', @deps);
 	$DEPENDS->add_pm(
 		File::Spec->catfile('lib', 'Gtk2', 'Soup.pm'),
-		File::Spec->catfile('$(INST_LIBDIR)', 'Gtk2', 'Soup.pm'),
+		File::Spec->catfile('$(INST_LIBDIR)', 'Soup.pm'),
 	);
 
 	# Code generation
@@ -80,9 +80,7 @@ sub main {
 #		ABSTRACT_FROM => File::Spec->catfile('lib', 'Gtk2', 'Soup.pm'),
 		LICENSE       => 'perl, lgpl',
 
-		PREREQ_PM     => {
-			%requires,
-		},
+		PREREQ_PM     => \%requires,
 		PREREQ_FATAL  => 1, # Glib is mandatory otherwise the Makefile can't be created
 		
 		XSPROTOARG    => '-noprototypes ',

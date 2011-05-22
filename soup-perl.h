@@ -1,14 +1,9 @@
-#ifndef _CHAMPLAIN_PERL_H_
+#ifndef _SOUP_PERL_H_
 
-#include <clutter-perl.h>
+#include <gperl.h>
 
-#include <champlain/champlain.h>
+#include <libsoup/soup.h>
 
-#ifdef CHAMPLAINPERL_MEMPHIS
-#include <memphis-perl.h>
-#include <champlain/champlain-memphis.h>
-#endif
+#include "soup-autogen.h"
 
-#include "champlain-autogen.h"
-
-#endif /* _CHAMPLAIN_PERL_H_ */
+#endif /* _SOUP_PERL_H_ */
