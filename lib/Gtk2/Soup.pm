@@ -14,7 +14,7 @@ Soup consists of the Perl bindings for the C library libsoup which HTTP
 client/server library for GNOME.
 
 For more information about libsoup see:
-L<http://projects.gnome.org/libsoup/>.
+L<http://live.gnome.org/LibSoup>.
 
 =head1 AUTHORS
 
