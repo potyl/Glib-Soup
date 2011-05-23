@@ -30,7 +30,7 @@ sub main {
 
 	eval {
 		%pkgconfig = ExtUtils::PkgConfig->find("libsoup-2.4");
-		push @XS_FILES, Glib::MakeHelper->read_source_list_file('xs/xs-soup');
+		push @XS_FILES, <xs/*.xs>;
 		push @typemaps, 'maps';
 		push @deps, 'Glib';
 		$requires{Glib} = '1.000';
