@@ -1,2 +1,3 @@
 SOUP_TYPE_SESSION                SoupSession               GObject    Glib::SoupSession
 SOUP_TYPE_SESSION_ASYNC          SoupSessionAsync          GObject    Glib::SoupSessionAsync
+SOUP_TYPE_SESSION_SYNC           SoupSessionSync          GObject    Glib::SoupSessionSync
