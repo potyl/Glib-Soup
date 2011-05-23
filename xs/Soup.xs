@@ -1,7 +1,7 @@
 #include "soup-perl.h"
 
 
-MODULE = Gtk2::Soup  PACKAGE = Gtk2::Soup  PREFIX = soup_
+MODULE = Glib::Soup  PACKAGE = Glib::Soup  PREFIX = soup_
 
 
 BOOT:

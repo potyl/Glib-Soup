@@ -9,13 +9,13 @@ use Data::Dumper;
 
 
 BEGIN {
-	use_ok('Gtk2::Soup');
+	use_ok('Glib::Soup');
 }
 
 sub main {
-	my $session = Gtk2::SoupSessionAsync->new();
-	isa_ok($session, 'Gtk2::SoupSessionAsync');
-	isa_ok($session, 'Gtk2::SoupSession');
+	my $session = Glib::SoupSessionAsync->new();
+	isa_ok($session, 'Glib::SoupSessionAsync');
+	isa_ok($session, 'Glib::SoupSession');
 	return 0;
 }
 

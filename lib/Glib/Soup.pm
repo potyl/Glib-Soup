@@ -1,12 +1,12 @@
-package Gtk2::Soup;
+package Glib::Soup;
 
 =head1 NAME
 
-Gtk2::Soup - HTTP client/server library for GNOME
+Glib::Soup - HTTP client/server library for GNOME
 
 =head1 SYNOPSIS
 
-	use Gtk2::Soup;
+	use Glib::Soup;
 
 =head1 DESCRIPTION
 

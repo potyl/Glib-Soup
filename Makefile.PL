@@ -45,9 +45,9 @@ sub main {
 		eval "use $module '$version'; 1;" or die "Can't load $module $version\n";
 	}
 	
-	$DEPENDS = ExtUtils::Depends->new('Gtk2::Soup', @deps);
+	$DEPENDS = ExtUtils::Depends->new('Glib::Soup', @deps);
 	$DEPENDS->add_pm(
-		File::Spec->catfile('lib', 'Gtk2', 'Soup.pm'),
+		File::Spec->catfile('lib', 'Glib', 'Soup.pm'),
 		File::Spec->catfile('$(INST_LIBDIR)', 'Soup.pm'),
 	);
 
@@ -55,7 +55,7 @@ sub main {
 	Glib::CodeGen->parse_maps('soup', input => [ @typemaps ]);
 	Glib::CodeGen->write_boot(
 		xs_files => [ @XS_FILES ],
-		ignore   => qr/^Gtk2::Soup$/,
+		ignore   => qr/^Glib::Soup$/,
 	);
 	
 	
@@ -75,9 +75,9 @@ sub main {
 	# Create the Makefile
 	my @args = (
 		AUTHOR        => 'Emmanuel Rodriguez <potyl@cpan.org>',
-		NAME          => 'Gtk2::Soup',
-		VERSION_FROM  => File::Spec->catfile('lib', 'Gtk2', 'Soup.pm'),
-		ABSTRACT_FROM => File::Spec->catfile('lib', 'Gtk2', 'Soup.pm'),
+		NAME          => 'Glib::Soup',
+		VERSION_FROM  => File::Spec->catfile('lib', 'Glib', 'Soup.pm'),
+		ABSTRACT_FROM => File::Spec->catfile('lib', 'Glib', 'Soup.pm'),
 		LICENSE       => 'perl, lgpl',
 
 		PREREQ_PM     => \%requires,

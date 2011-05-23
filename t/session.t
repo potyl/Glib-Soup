@@ -9,7 +9,7 @@ use Data::Dumper;
 
 
 BEGIN {
-    use_ok('Gtk2::Soup');
+    use_ok('Glib::Soup');
 }
 
 sub main {

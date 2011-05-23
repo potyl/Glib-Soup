@@ -1,2 +1,2 @@
-SOUP_TYPE_SESSION                SoupSession               GObject    Gtk2::SoupSession
-SOUP_TYPE_SESSION_ASYNC          SoupSessionAsync          GObject    Gtk2::SoupSessionAsync
+SOUP_TYPE_SESSION                SoupSession               GObject    Glib::SoupSession
+SOUP_TYPE_SESSION_ASYNC          SoupSessionAsync          GObject    Glib::SoupSessionAsync

@@ -1,7 +1,7 @@
 #include "soup-perl.h"
 
 
-MODULE = Gtk2::SoupSessionAsync  PACKAGE = Gtk2::SoupSessionAsync  PREFIX = soup_session_async_
+MODULE = Glib::SoupSessionAsync  PACKAGE = Glib::SoupSessionAsync  PREFIX = soup_session_async_
 
 
 SoupSession*
